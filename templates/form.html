@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Story Manager - Add new Story</title>
+</head>
+<body>
+<form action="http://0.0.0.0:10000/list" method="POST">
+    <h1>User Story Manager - Add new Story</h1>
+    <p>Story Title<br> <textarea name="Story Title" rows="1" cols="100"></textarea></p>
+    <p>User Story<br> <textarea name="User Story" rows="6" cols="100"></textarea></p>
+    <p>Acceptance Criteria<br> <textarea name="Acceptance Criteria" rows="8" cols="100"></textarea></p>
+    <p>Business Value<br> <input type="number" name="Business Value" min="100" max="1500" step="100"></p>
+    <p>Estimation (h)<br> <input type="number" name="Estimation (h)" min="0.5" max="40" step="0.5"></p>
+    <select>
+        <option value="planning">Planning</option>
+        <option value="to_do">To Do</option>
+        <option value="in_progress">In Progress</option>
+        <option value="review">Review</option>
+        <option value="done">Done</option>
+    </select>
+    <p><input type="submit" value="Submit"></p>
+</form>
+</body>
+</html>

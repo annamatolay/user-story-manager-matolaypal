@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Story Manager</title>
+</head>
+<body>
+<a href="http://0.0.0.0:10000/story">Add new story</a>
+<table border = 1>
+    <tr>
+        <th>Story Title</th>
+        <th>User Stroy</th>
+        <th>Acceptance Criteria</th>
+        <th>Business Value</th>
+        <th>Estimation (h)</th>
+    </tr>
+    {% for key, value in result.items() %}
+        <td> {{ value }} </td>
+    {% endfor %}
+</table>
+</body>
+</html>
