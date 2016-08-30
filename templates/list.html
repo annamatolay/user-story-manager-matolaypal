@@ -14,8 +14,14 @@
         <th>Business Value</th>
         <th>Estimation (h)</th>
     </tr>
-    {% for key, value in result.items() %}
-        <td> {{ value }} </td>
+    {% for item in data %}
+        <tr>
+            <td>{{ item.story_title }}</td>
+            <td>{{ item.user_story }}</td>
+            <td>{{ item.acceptance_criteria }}</td>
+            <td>{{ item.business_value }}</td>
+            <td>{{ item.estimation }}</td>
+        </tr>
     {% endfor %}
 </table>
 </body>
