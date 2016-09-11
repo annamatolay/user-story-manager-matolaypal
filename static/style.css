@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+
+.navbar{
+	margin-bottom:50px;
+}
+th, td {
+	margin-right:5px;
+}

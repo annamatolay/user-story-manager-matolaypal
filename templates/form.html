@@ -1,25 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>User Story Manager - Add new Story</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="../static/style.css" rel="stylesheet" type="text/css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<form action="http://0.0.0.0:10000/list" method="POST">
-    <h1>User Story Manager - Add new Story</h1>
-    <p>Story Title<br> <textarea name="Story Title" rows="1" cols="100"></textarea></p>
-    <p>User Story<br> <textarea name="User Story" rows="6" cols="100"></textarea></p>
-    <p>Acceptance Criteria<br> <textarea name="Acceptance Criteria" rows="8" cols="100"></textarea></p>
-    <p>Business Value<br> <input type="number" name="Business Value" min="100" max="1500" step="100"></p>
-    <p>Estimation (h)<br> <input type="number" name="Estimation" min="0.5" max="40" step="0.5"></p>
-    <select>
+<div class="container">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://0.0.0.0:10000/list">list all story</a></li>
+        <li><a href="http://0.0.0.0:10000/story">add new story</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</nav>
+</div>
+<br>
+<br>
+<br>
+
+<div class="container">
+<h1>User Story Manager - Add new Story</h1>
+<form class="form-horizontal" action="http://0.0.0.0:10000/list" method="POST">
+<div class="form-group">
+  <label for="story_title">Story Title</label>
+  <textarea class="form-control" rows="1" cols="100" name="story_title" id="story_title"></textarea>
+</div>
+<div class="form-group">
+  <label for="story_title">User Story</label>
+<textarea class="form-control" name="user_story" rows="6" cols="100" id="user_story"></textarea>
+</div>
+
+<div class="form-group">
+  <label for="acceptance_criteria">Acceptance Criteria</label>
+<textarea class="form-control" name="acceptance_criteria" rows="8" cols="100" id="acceptance_criteria"></textarea>
+</div>
+
+<div class="form-group">
+  <label for="business_value">Business Value</label>
+<input type="number" class="form-control" name="business_value"  min="100" max="1500" step="100" id="acceptance_criteria">
+</div>
+
+<div class="form-group">
+  <label for="estimation">Estimation (h)</label>
+      <input type="number" name="estimation" id="estimation" min="0.5" max="40" step="0.5"></p>
+</div>
+
+<div class="form-group">
+  <label for="status">Status</label>
+    <select name="status" id="status" >
         <option value="planning">Planning</option>
         <option value="to_do">To Do</option>
         <option value="in_progress">In Progress</option>
         <option value="review">Review</option>
         <option value="done">Done</option>
     </select>
-    <p><input type="submit" value="Submit"></p>
+</div>
+ <button type="submit" name="submit" class="btn btn-default">Submit</button>
 </form>
+</div>
 </body>
 </html>

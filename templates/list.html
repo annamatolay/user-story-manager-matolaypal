@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>User Story Manager</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Story Manager - Add new Story</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="static/style.css" rel="stylesheet" type="text/css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<a href="http://0.0.0.0:10000/story">Add new story</a>
-<table border = 1>
+<div class="container">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://0.0.0.0:10000/list">list all story</a></li>
+        <li><a href="http://0.0.0.0:10000/story">add new story</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</nav>
+</div>
+<br>
+<br>
+<br>
+
+<div class="container">
+<table class="table-responsive">
     <tr>
         <th>Story Title</th>
         <th>User Stroy</th>
         <th>Acceptance Criteria</th>
         <th>Business Value</th>
         <th>Estimation (h)</th>
+        <th>Status</th>
     </tr>
     {% for item in data %}
         <tr>
@@ -21,8 +51,11 @@
             <td>{{ item.acceptance_criteria }}</td>
             <td>{{ item.business_value }}</td>
             <td>{{ item.estimation }}</td>
+            <td>{{ item.status }}</td>
         </tr>
     {% endfor %}
 </table>
+
+</div>
 </body>
 </html>
