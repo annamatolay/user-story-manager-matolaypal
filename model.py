@@ -1,6 +1,6 @@
 from peewee import *
 
-db = input("Give your database name: ")
+db = ''
 psql_db = PostgresqlDatabase(db)
 psql_db.connect()
 
@@ -17,16 +17,18 @@ class UserStory(BaseModel):
     acceptance_criteria = CharField()
     business_value = CharField()
     estimation = CharField()
+    status = CharField()
 
     # When you run this method, then the db get the data.
     @staticmethod
     def add_story(data):
         for item in data:
-            UserStory.create(story_title=item['Story Title'],
-                             user_story=item['User Story'],
-                             acceptance_criteria=item['Acceptance Criteria'],
-                             business_value=item['Business Value'],
-                             estimation=item['Estimation']
+            UserStory.create(story_title=item['story_title'],
+                             user_story=item['user_story'],
+                             acceptance_criteria=item['acceptance_criteria'],
+                             business_value=item['business_value'],
+                             estimation=item['estimation'],
+                             status=item['status']
                              )
 try:
     psql_db.create_table(UserStory)
