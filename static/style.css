@@ -5,5 +5,21 @@
 	margin-bottom:50px;
 }
 th, td {
-	margin-right:5px;
+	padding:5px 10px;
+}
+table{
+	margin-top:20px;
+	border-collapse:collapse;
+}
+th{
+	border-bottom: 1px solid gray;
+}
+button.btn-info{
+	float:right;
+	font-size:16px;
+	padding:5px 20px;
+}
+nav{
+	font-size:18px;
+	text-transform: uppercase;
 }
